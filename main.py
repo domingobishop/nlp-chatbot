@@ -10,6 +10,12 @@ pairs = [
         r'hi',
         ['hello', 'kamusta', 'mabuhay',]
     ],
+    [
+        r'(.*)', # default response if no patterns from above is found
+        [
+            "Sorry I don't know what `%1` is?",
+        ],
+    ],
 ]
 
 def chatty_bot():
