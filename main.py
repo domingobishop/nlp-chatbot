@@ -1,5 +1,6 @@
 # chatty_bot
 # Examples: https://github.com/nltk/nltk/tree/develop/nltk/chat
+# Example: https://gist.github.com/makmac213/2939c1e4898fe82aaa1ebe1d7f5032a2
 from nltk.chat.util import Chat, reflections
 
 pairs = [
