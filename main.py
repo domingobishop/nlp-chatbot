@@ -1,21 +1,24 @@
-# hugotbot.py
+# chatty_bot
+# Examples: https://github.com/nltk/nltk/tree/develop/nltk/chat
 from nltk.chat.util import Chat, reflections
 
 pairs = [
     [
         r"My name is (.*)",
-        ['hello %1',]
+        ["Hello %1"]
     ],
     [
-        r'hi',
-        ['hello', 'kamusta', 'mabuhay',]
+        r"Hi",
+        ["Hello", "Hi", "Hey",]
     ],
     [
-        r'(.*)', # default response if no patterns from above is found
-        [
-            "Sorry I don't know what `%1` is?",
-        ],
+        r"(.*) your name?",
+        ["Peter"]
     ],
+    [
+        r"(.*)", # default response if no patterns from above is found
+        ["Sorry I don't know what `%1` is?"]
+    ]
 ]
 
 def chatty_bot():
