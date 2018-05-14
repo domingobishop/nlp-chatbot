@@ -17,13 +17,17 @@ pairs = [
         ["Peter"]
     ],
     [
+        r"(.*) (looking for|trying to find|want to) (.*)",
+        ["Could you tell me the topics you are interested in?"]
+    ],
+    [
         r"(.*)", # default response if no patterns from above is found
         ["Sorry I don't know what `%1` is?"]
     ]
 ]
 
 def chatty_bot():
-    print("Hi how can I help you today?")
+    print("Hi, how can I help you today?")
     chat = Chat(pairs, reflections)
     chat.converse()
 
