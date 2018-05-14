@@ -14,10 +14,6 @@ def whoIs(query, sessionID="general"):
                 pass
     return "I don't know about " + query
 
-def chatbot_ai():
-    call = multiFunctionCall({"whoIs": whoIs})
-    firstQuestion = "Hi, how are you?"
-    Chat("pairs.template", reflections, call=call).converse(firstQuestion)
-
-if __name__ == "__main__":
-    chatbot_ai()
+call = multiFunctionCall({"whoIs": whoIs})
+firstQuestion = "Hi, how are you?"
+Chat("pairs.template", reflections, call=call).converse(firstQuestion)

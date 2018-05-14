@@ -1,8 +1,16 @@
 {% block %}
-    {% client %}(Do you know about|what is|who is|tell me about)(.*){% endclient %}
+    {% client %}(Do you know about|who is|tell me about)(.*){% endclient %}
     {% response %}{% call whoIs:%2 %}{% endresponse %}
 {% endblock %}
 {% block %}
     {% client %}My name is (.*){% endclient %}
     {% response %}Nice to meet you, %1{% endresponse %}
+{% endblock %}
+{% block %}
+    {% client %}(.*) your name?{% endclient %}
+    {% response %}Peter{% endresponse %}
+{% endblock %}
+{% block %}
+    {% client %}(.*) your name?{% endclient %}
+    {% response %}Peter{% endresponse %}
 {% endblock %}
